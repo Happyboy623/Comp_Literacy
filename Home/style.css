@@ -1,0 +1,239 @@
+li, ul, nav {
+    list-style:none;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(background.jpg);
+    background-size: cover;
+    background-position: 100%;
+}
+
+.jumbotron {
+    background-color: rgb(91, 189, 250);
+    color: white;
+}
+
+.navbar {
+    background-color: rgb(91, 189, 250);
+    font-size: 20px;
+}
+
+.header {
+    font-size:25px;
+    color: white;
+    background-color: rgb(91, 189, 250);
+    padding: 10px 40px;
+    opacity: 0.95;
+}
+
+#search {
+    width: 10rem;
+    height: 2.2rem;
+    border: 3px solid #2e89ad;
+    font-size: 17px;
+    padding: 6px 12px;
+    border-radius: 3px;
+    transition: width 2s;
+}
+
+#search:focus {
+    width: 13rem;
+    transition-timing-function: linear;
+}
+
+.searchbutton {
+    background-color: #2e89ad;
+    border: 2px solid #2e89ad;
+    color: white;
+    height: 2.2rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 17px;
+    border-radius: 6px;
+    transition-duration: 0.4s;
+}
+
+.searchbutton:hover {
+    background-color: white;
+    color: #2e89ad;
+    border: 2px solid #2e89ad;
+}
+
+.sidebar-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.sidebar {
+    background-color: rgb(91, 189, 250);
+    height: 24rem;
+    font-size: 15px;
+    padding: .5rem 0 0 0;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.sidebar a {
+        display: block;
+        color: #000;
+        padding: 10px 20px;
+        text-decoration: none;
+}
+
+.sidebar-container a:hover {
+    background-color: lightslategray;
+    color: white;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    
+}
+
+.main {
+    font: 45px;
+    background-color: rgb(91, 189, 250);
+    color: black;
+    width: 75%;
+    height: 24rem;
+    text-align: center;
+    padding: 2rem;
+    margin-left: 1%;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.content {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.content a {
+    color: white;
+}
+
+.content-container {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 15px 10px 20px 10px;
+}
+
+.content1 {
+    display: flex;
+    justify-content: center;
+    background-image: url(mouse.jpg);
+    background-size: cover;
+    border-radius: 4px;
+    width: 25%;
+    height: 20rem;
+    transition: width height 20s;
+}
+
+.content2 {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-image: url(keyboard.jpg);
+    background-size: cover;
+    border-radius: 4px;
+    width: 25%;
+    height: 20rem;
+    transition: width height 20s;
+}
+
+.content3 {
+    display: flex;
+    justify-content: center;
+    background-image: url(onoff.jpg);
+    background-size: cover;
+    border-radius: 4px;
+    width: 25%;
+    height: 20rem;
+    transition: width height 20s;
+}
+
+.content1:hover {
+    width: 27%;
+    height: 22rem;
+}
+
+.content2:hover {
+    width: 27%;
+    height: 22rem;
+}
+
+.content3:hover {
+    width: 27%;
+    height: 22rem;
+}
+
+.footer {
+    font-size: 20px;
+}
+
+.sidebar-main {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+}
+
+@media (max-width: 650px) {
+    .sidebar-main {
+      flex-direction: column;
+}
+    .main {
+        height: 100%;
+        margin-top: 1%;
+    }
+}
+
+
+.sidebar-main > .sidebar-container {
+    flex: 1 1 30%;
+}
+
+.sidebar-main > .main-container {
+    flex: 1 1 70%;
+}
+
+.fa {
+    padding: 1px;
+    font-size: 50px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 5px;
+}
+  
+.fa:hover {
+  opacity: 0.7;
+  color: antiquewhite;
+}
+
+.fa-instagram {
+    background: #d6249f;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    box-shadow: 0px 3px 10px rgba(0,0,0,.25);
+    color: white;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+@media screen {
+    
+}
