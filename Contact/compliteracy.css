@@ -20,6 +20,10 @@ body {
     font-size: 20px;
 }
 
+#contact {
+    background-color: purple;
+}
+
 .header {
     font-size:25px;
     color: white;
@@ -68,6 +72,10 @@ body {
     flex-direction: column;
 }
 
+.searchbar {
+    float: right;
+}
+
 .head {
     align-items: space-evenly;
 }
@@ -88,7 +96,7 @@ body {
 
 /* CONTACT US CSS */
 
-.query1 {
+/* .query1 {
     font-size: 20px;
     padding: 10px 20px 10px 20px;
     color: white;
@@ -122,9 +130,92 @@ body {
     background-color: white;
     color: #2e89ad;
     border: 2px solid #2e89ad;
+} */
+
+.container form{
+    padding: 68px 15px 72px !important;
 }
 
-#fnamesname {
+/* .wrapper{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 350px;
+    width: 100%;
+    background: cornsilk;
+    padding: 25px;
+    border-radius: 5px;
+}  */
+/* .container form h3 {
+    font-family: "proxima-nova", sans-serif;
+    font-weight: 100 !important;
+    text-transform: capitalize;
+    font-size: 65px;
+    margin-bottom: 20px;
+    text-align: center;
+} */
+
+.control-group {
+  margin-bottom: 15px;
+}
+
+.button {
+    width: 100px;
+}
+
+.form {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+#error_message{
+    color: red;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: left;
+}
+
+#h3 {
+    color: #fff;
+}
+.container p {
+    font-style: normal !important;
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 0px;
+}
+.comment{
+height: 200px;
+width: 100px;
+}
+
+.parallax {
+    background-attachment: inherit !important;
+}
+.parallax {
+    background-attachment: inherit !important;
+    background-repeat: repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    width: 100%;
+    z-index: -10;
+    height: 300px
+}
+
+.theme-selector {
+  display: none;
+}
+
+.contact-page-form h3 {
+    font-size: 26px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+ #fnamesname {
     width: 25rem;
     height: 2.5rem;
     margin: 0.5%;
@@ -146,7 +237,31 @@ body {
     margin: 0.5%;
     border: 2px solid black;
     border-radius: 3px;
-}
+} 
+
+#name {
+    width: 25rem;
+    height: 2.5rem;
+    margin: 0.5%;
+    border: 2px solid black;
+    border-radius: 3px;
+} 
+
+#lname {
+    width: 25rem;
+    height: 2.5rem;
+    margin: 0.5%;
+    border: 2px solid black;
+    border-radius: 3px;
+} 
+
+#phone {
+    width: 25rem;
+    height: 2.5rem;
+    margin: 0.5%;
+    border: 2px solid black;
+    border-radius: 3px;
+} 
 
 #comment {
     width: 25rem;
@@ -160,15 +275,19 @@ body {
     text-align: initial;
 }
 
-.information {
+#btn {
+    background-color: rgb(91, 189, 250);
+}
+
+/* .information {
     display: flex;
     justify-content: space-evenly;
     padding: 40px 10px 40px 10px;
     background-color: #40b6e6;
-}
+} */
 
-.phone {
-    display:flex;
+/* .phone {
+     display:flex;
     background-color: rgb(167, 167, 167);
     width: 16rem;
     height: 16rem;
@@ -186,7 +305,7 @@ body {
     background-color: rgb(167, 167, 167);
     width: 16rem;
     height: 16rem;
-}
+} */
 
 .fa {
     padding: 1px;

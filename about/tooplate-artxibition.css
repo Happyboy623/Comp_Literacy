@@ -84,6 +84,10 @@ ul, li {
   font-size: 20px;
 }
 
+#about {
+  background-color: purple;
+}
+
 .header {
   font-size:25px;
   color: white;
@@ -130,6 +134,10 @@ ul, li {
   display: flex;
   justify-content: center;
   flex-direction: column;
+}
+
+.searchbar {
+  float: right;
 }
 
 header, nav, section, article, aside, footer, hgroup {

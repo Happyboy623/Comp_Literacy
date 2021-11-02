@@ -20,6 +20,14 @@ body {
     font-size: 20px;
 }
 
+#home{
+    background-color: purple;
+}
+
+.searchbar {
+    float: right;
+}
+
 .header {
     font-size:25px;
     color: white;
@@ -62,7 +70,7 @@ body {
     border: 2px solid #2e89ad;
 }
 
-.sidebar-container {
+/* .sidebar-container {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -70,11 +78,11 @@ body {
 
 .sidebar {
     background-color: rgb(91, 189, 250);
-    height: 24rem;
-    font-size: 15px;
-    padding: .5rem 0 0 0;
+    font-size: 20px;
+    padding: 0;
     border-radius: 10px;
     font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .sidebar a {
@@ -87,7 +95,7 @@ body {
 .sidebar-container a:hover {
     background-color: lightslategray;
     color: white;
-}
+} */
 
 .main-container {
     display: flex;
@@ -97,31 +105,48 @@ body {
 }
 
 .main {
-    font: 45px;
+    font-size: 25px;
     background-color: rgb(91, 189, 250);
-    color: black;
-    width: 75%;
-    height: 24rem;
+    color: white;
     text-align: center;
-    padding: 2rem;
-    margin-left: 1%;
+    padding: 0;
+    margin-left: 0;
     border-radius: 10px;
-    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .content {
-    font-size: 20px;
+    margin-bottom: 3rem;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    background-color: rgb(43, 34, 70);
+    text-align: center;
+}
+
+.content:hover img {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+}
+
+.content-image {
+    display: block;
+    overflow: hidden;
+}
+
+.content {
+    font-size: 30px;
     font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .content a {
     color: white;
 }
 
-.content-container {
+/* .content-container-row {
     display: flex;
     justify-content: space-evenly;
-    padding: 15px 10px 20px 10px;
+    padding: 15px;
 }
 
 .content1 {
@@ -158,6 +183,39 @@ body {
     transition: width height 20s;
 }
 
+.content4 {
+    display: flex;
+    justify-content: center;
+    background-image: url(onoff.jpg);
+    background-size: cover;
+    border-radius: 4px;
+    width: 25%;
+    height: 20rem;
+    transition: width height 20s;
+}
+
+.content5 {
+    display: flex;
+    justify-content: center;
+    background-image: url(onoff.jpg);
+    background-size: cover;
+    border-radius: 4px;
+    width: 25%;
+    height: 20rem;
+    transition: width height 20s;
+}
+
+.content6 {
+    display: flex;
+    justify-content: center;
+    background-image: url(onoff.jpg);
+    background-size: cover;
+    border-radius: 4px;
+    width: 25%;
+    height: 20rem;
+    transition: width height 20s;
+}
+
 .content1:hover {
     width: 27%;
     height: 22rem;
@@ -172,6 +230,21 @@ body {
     width: 27%;
     height: 22rem;
 }
+
+.content4:hover {
+    width: 27%;
+    height: 22rem;
+}
+
+.content5:hover {
+    width: 27%;
+    height: 22rem;
+}
+
+.content6:hover {
+    width: 27%;
+    height: 22rem;
+} */
 
 .footer {
     font-size: 20px;

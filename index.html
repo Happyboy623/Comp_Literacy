@@ -17,7 +17,7 @@
     <nav class="navbar sticky-top navbar-expand-md justify-content-end navbar-dark">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link text-uppercase" href="./index.html"><strong>Home</strong></a>
+                <a id="home" class="nav-link" href="./index.html"><strong>Home</strong></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-uppercase" href="./about/ABOUTUS.html"><strong>About</strong></a>
@@ -25,10 +25,11 @@
             <li class="nav-item text-uppercase">
                 <a class="nav-link" href="./Contact/contactus.html"><strong>Contact</strong></a>
             </li>
-            <li><input type="text" id="search" name="search" placeholder="Search bar">
-            <button type="button" class="searchbutton" name="search">GO</button></li>
         </ul>
     </nav>
+
+    <div class="searchbar"><input type="text" id="search" name="search" placeholder="Search bar">
+            <button type="button" class="searchbutton" name="search">GO</button></div>
 
     <div class="jumbotron jumbotron-fluid text-center p-4">
         <div class="container">
@@ -38,8 +39,9 @@
         </div>
     </div>
 </div>
-<br>
-<div class="sidebar-main">
+<br> <br>
+
+ <!-- <div class="sidebar-main">
     <div class="sidebar">
         <nav class="container-fluid mx-auto">
             <ul>
@@ -58,7 +60,7 @@
                 </div>
             </ul>
         </nav>
-    </div>
+    </div> -->
 
     <div class="main">
         <div class="main-container">
@@ -74,17 +76,54 @@
     </div>
 </div>
 
-<div class="content">
-    <div class="content container-fluid mx-auto mt-3 mb-3">
-        <div class="content-container">
-            <div class="content1">
-                <a href="/content/using_mouse.html">Mouse</a>
+<br> <br>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="content">
+            <h3 style="color: white;">Mouse</h3>
+            <div class="content-image">
+                <a href="/content/using_mouse.html"><img src="/Home/mouse.jpg" alt="" class="img-fluid"></a>
             </div>
-            <div class="content2">
-                <a href="/content/using_keyboard.html">Keyboard</a>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="content">
+            <h3 style="color: white;">Keyboard</h3> <!-- <a href="/content/using_keyboard.html">KEYBOARD</a> -->
+            <div class="content-image">
+                <a href="/content/using_keyboard.html"><img src="/Home/keyboard.jpg" alt="" class="img-fluid"></a>
             </div>
-            <div class="content3">
-                <a href="/content/logging.html">Log In</a>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="content">
+            <h3 style="color: white;">Logging In</h3> <!-- <a href="/content/logging.html">ON/OFF</a> -->
+            <div class="content-image">
+                <a href="/content/logging.html"><img src="/Home/onoff.jpg" alt="" class="img-fluid"></a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="content">
+            <h3 style="color: white;">Gmail Setup</h3> <!-- <a href="/content/gmail.html">GMAIL SETUP</a> -->
+            <div class="content-image">
+                <a href="/content/gmail.html"><img src="/Home/Email.jpeg" alt="" class="img-fluid"></a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="content">
+            <h3 style="color: white;">Word Document</h3> <!-- <a href="/content/wordDocument.html">WORD DOCUMENT</a> -->
+            <div class="content-image">
+                <a href="/content/wordDocument.html"><img src="/Home/Document.jpeg" alt="" class="img-fluid"></a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="content">
+            <h3 style="color: white;">Internet Browsing</h3>
+            <div class="content-image">
+                <a href="/content/browseInternet.html"><img src="/Home/Internet.jpeg" alt="" class="img-fluid"></a>
             </div>
         </div>
     </div>

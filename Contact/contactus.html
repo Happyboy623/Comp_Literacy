@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="compliteracy.css" type="text/css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="script.js"></script>
 </head>
 
 <body>
@@ -22,12 +23,13 @@
                     <a class="nav-link text-uppercase" href="../about/ABOUTUS.html"><strong>About</strong></a>
                 </li>
                 <li class="nav-item text-uppercase">
-                    <a class="nav-link" href="./contactus.html"><strong>Contact</strong></a>
+                    <a id="contact" class="nav-link" href="./contactus.html"><strong>Contact</strong></a>
                 </li>
-                <li><input type="text" id="search" name="search" placeholder="Search bar">
-                <button type="button" class="searchbutton" name="search">GO</button></li>
             </ul>
         </nav>
+
+        <div class="searchbar"><input type="text" id="search" name="search" placeholder="Search bar">
+                <button type="button" class="searchbutton" name="search">GO</button></div>
 
         <div class="jumbotron jumbotron-fluid text-center p-4">
             <div class="container">
@@ -38,7 +40,7 @@
     </div>
     </div>
     <br>
-    <div class="information1">
+    <!-- <div class="information1">
 
         <div id="googleMap" style="width:100%;height:400px"></div>
         
@@ -63,23 +65,138 @@
 };
 var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
 }
-    </script>
-    <form action="">
+    </script> -->
+    <!-- <form name="cform" method="post" action="" >
         <fieldset>
             <legend class="query1"><em>Send Us A Query</em></legend>
                 <div class="query2">
-                    <li>Name & Surname</li>
-                        <input type="text" id="fnamesname" name="namesurname" ><br><br>
+                     <li>Name & Surname</li>
+                        <input type="text" id="fnamesname" placeholder="Name & Surname" name="namesurname" autocomplete="off" required><br><br>
                     <li>Email Address</li>
-                        <input type="text" id="email" name="email"><br><br>
+                        <input type="text" id="email" name="email" autocomplete="off"><br><br>
                     <li>Subject of query</li>
-                        <input type="text" id="subject" name="subject"><br><br>
+                        <input type="text" id="subject" name="subject" autocomplete="off"><br><br>
                     <li>Comment</li>
-                        <input type="text" id="comment" name="comment"><br><br>
-                    <button type="button" class="button" name="submit">SUBMIT</button></li>
+                        <input type="text" id="comment" name="comment" autocomplete="off"><br><br>
+                        <small></small>
+                    <button type="button" class="button" name="submit" value="Submit" onsubmit="return validateform()">SUBMIT</button></li>
                 </div>
         </fieldset>
-    </form><br>
+    </form><br> -->
+
+<div class="container form">
+    <h3>Send Us A Query</h3>
+    <div id="error_message"></div>
+
+    <form id="contactform">
+        <div class="row">
+            <div class="col-md-7">
+                <div class="control-group">
+                    <!-- <label>First Name</label> -->
+                    <input type="text" id="name" placeholder="First Name">
+                </div>
+                <div class="control-group">
+                    <!-- <label>Last Name</label> -->
+                    <input type="text" id="lname" placeholder="Last Name">
+                </div>
+                <div class="control-group">
+                    <!-- <label>Email</label> -->
+                    <input type="text" id="email" placeholder="Email Address">
+                </div>
+                <div class="control-group">
+                    <!-- <label>Phone</label> -->
+                    <input type="text" id="phone" placeholder="Phone Number" maxlength="10">
+                </div>
+                <div class="comment-area">
+                    <!-- <label>Comment</label> -->
+                    <textarea type="text" id="comment" placeholder="Comment"></textarea>
+                </div>
+                <div class="button">
+                    <input type="submit" id="btn">
+                 </div>
+            </div>
+        </div> 
+    </form>
+</div>
+
+<div class="col-md-5 contact-right-info">
+    <h3>Our Offices</h3>
+    <p style="color: #000000">97 Durham Ave, Salt River, <br />
+      Cape Town, 7925<br />
+       <a href="tel:4078981961">407.555.1961</a>
+    </p>
+    <h3>EMAIL ADDRESS</h3>
+    <a href="mailto:info@webcorpco.com">info@CapaCiti.com</a>
+    <h3>SUPPORT</h3>
+    <a href="tel:8005551656">800.555.1656</a><br />
+    <a href="mailto:support@webcorpco.com">support@CapaCiti.com</a>
+</div>
+
+<script>
+
+function validation() {
+    var name = document.getElementById("name").value;
+    var lname = document.getElementById("lname").value;
+    var email = document.getElementById("email").value;
+    var phone = document.getElementById("phone").value;
+    var comment = document.getElementById("comment").value;
+    var error_message = document.getElementById("error_message");
+
+
+    error_message.style.padding = "10px";
+
+    if(name == ""){
+       var text = "Please Enter The Valid Name!";
+        error_message.innerHTML = text;
+    }
+
+    else if(lname == ""){
+        var text = "Please Enter The Valid Last Name!";
+        error_message.innerHTML = text;
+    }
+
+    else if(email == "" && !isEmail(email)){
+        var text = "Please Enter The Valid Email!";
+        error_message.innerHTML = text;
+    }
+
+    else if(phone == "" && !isContact(phone)){
+        var text = "Please enter valid number!";
+        error_message.innerHTML = text;
+    }
+
+    else if(phone.length < 10){
+        var text = "Please enter at least 10 digits!";
+        error_message.innerHTML = text;
+    }
+
+    else if(comment == ""){
+       var text = "Add a comment!";
+        error_message.innerHTML = text;
+    }
+
+    else alert("SUCCESSSULLY SENT!");
+
+}
+
+var form = document.getElementById("contactform");
+form.addEventListener("submit", (e) => {
+   e.preventDefault();
+
+   validation();
+});
+
+
+function isEmail(email) {    
+    return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+    }
+
+    function isContact(contact) {    
+        return /^[\d,\s,\+,-]{5,20}/.test(contact);
+    }
+
+
+</script>
     
 
 <br>
@@ -118,6 +235,7 @@ var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
     </div>
 </div>
     
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
